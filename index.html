@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="mui-colors.css" rel="stylesheet" type="text/css" />
+    <script src="mui.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <!--<script type="text/javascript" src="index.js"></script>-->
+    <script type="text/javascript" src="nativeaudio.js"></script>
+    <script type="text/javascript" src="nativeaudio-browser.js"></script>
+    <script type="text/javascript" src="hotjs-audio.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+  </head>
+
+<body>
+
+
+
+        <div id="sidedrawer" class="mui--no-user-select">
+          <div id="sidedrawer-brand" class="mui--appbar-line-height">
+            <span class="mui--text-title">We Funk</span>
+          </div>
+          <div class="mui-divider"></div>
+          <ul>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="play.html"><strong>Play We Funk</strong></a></li>
+            <li><a href="music.html"><strong>Music</strong></a></li>
+            <li><a href="biography.html"><strong>Biography</strong></a></li>
+            <li><a href="discography.html"><strong>Discography</strong></a></li>
+        </ul>
+        </div>
+        <header id="header">
+          <div class="mui-appbar mui--appbar-line-height" style="background-color: #212121 !important;">
+            <div class="mui-container-fluid">
+              <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+              <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+              <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block" style="color: #84d2f6">Home</span>
+            </div>
+          </div>
+        </header>
+        <div class="mui--appbar-height"></div>
+          <!--<div class="mui--appbar-height"></div>-->
+          <script src="lottie.js"></script>
+                  <div id="lottie"style="height: 360px"> </div>
+</div>
+
+
+
+<div class="mui-container" style="text-align:center">
+        <a href="play.html"><button class="mui-btn mui-btn--primary"><div class="mui--text-button" style="text-align: center">GO!</div></button></a>
+</div>
+
+<script>
+bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+        console.log('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+      window.plugins.NativeAudio.preloadComplex('logo',
+                                                'audio/LogoAudio.mp3',
+                                                1, // volume
+                                                1, // voices
+                                                0, // delay
+      function(msg) {
+          console.info(msg);
+          window.plugins.NativeAudio.play('logo',
+                                          function(msg){console.info(msg)},
+                                          function(msg){ console.error( 'Error: ' + msg ); },
+                                          function(msg){ console.error( 'Complete: ' + msg ); });
+      },
+                                                function(msg){ alert( 'Error: ' + msg ); });
+
+  }
+};
+</script>
+<!--<audio src="audio/LogoAudio.mp3" autoplay></audio>-->
+
+</body>
+
+
+<script>
+      var animation = bodymovin.loadAnimation({
+container: document.getElementById('lottie'), // Required
+path: 'data2.json', // Required
+renderer: 'svg/canvas/html', // Required
+loop: false, // Optional
+autoplay: true, // Optional
+});
+
+
+
+
+
+</script>
+
+
+
+ </html>
