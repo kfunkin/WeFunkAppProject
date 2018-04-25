@@ -47,15 +47,6 @@ var app = {
             },
                                                       function(msg){ alert( 'Error: ' + msg ); });
 
-        window.setTimeout( function(){
-
-        window.plugins.NativeAudio.stop( 'noise' );
-
-        window.plugins.NativeAudio.unload( 'noise' );
-
-    }, 1000 * 60 );
-}
-
         }
 
     },
