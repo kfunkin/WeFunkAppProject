@@ -18,6 +18,36 @@
     <script type="text/javascript" src="hotjs-audio.js"></script>
     <script type="text/javascript">
         app.initialize();
+
+        bindEvents: function() {
+                document.addEventListener('deviceready', this.onDeviceReady, false);
+            },
+            // deviceready Event Handler
+            //
+            // The scope of 'this' is the event. In order to call the 'receivedEvent'
+            // function, we must explicitly call 'app.receivedEvent(...);'
+            onDeviceReady: function() {
+                app.receivedEvent('deviceready');
+                console.log('deviceready');
+            },
+            // Update DOM on a Received Event
+            receivedEvent: function(id) {
+              window.plugins.NativeAudio.preloadComplex('logo',
+                                                        'audio/LogoAudio.mp3',
+                                                        1, // volume
+                                                        1, // voices
+                                                        0, // delay
+              function(msg) {
+                  console.info(msg);
+                  window.plugins.NativeAudio.play('logo',
+                                                  function(msg){console.info(msg)},
+                                                  function(msg){ console.error( 'Error: ' + msg ); },
+                                                  function(msg){ console.error( 'Complete: ' + msg ); });
+              },
+                                                        function(msg){ alert( 'Error: ' + msg ); });
+
+          }
+        
     </script>
 
   </head>
@@ -60,37 +90,7 @@
         <a href="play.html"><button class="mui-btn mui-btn--primary"><div class="mui--text-button" style="text-align: center">GO!</div></button></a>
 </div>
 
-<script>
-bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        console.log('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-      window.plugins.NativeAudio.preloadComplex('logo',
-                                                'audio/LogoAudio.mp3',
-                                                1, // volume
-                                                1, // voices
-                                                0, // delay
-      function(msg) {
-          console.info(msg);
-          window.plugins.NativeAudio.play('logo',
-                                          function(msg){console.info(msg)},
-                                          function(msg){ console.error( 'Error: ' + msg ); },
-                                          function(msg){ console.error( 'Complete: ' + msg ); });
-      },
-                                                function(msg){ alert( 'Error: ' + msg ); });
 
-  }
-};
-</script>
 <!--<audio src="audio/LogoAudio.mp3" autoplay></audio>-->
 
 </body>
