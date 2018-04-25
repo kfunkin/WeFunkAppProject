@@ -6,10 +6,10 @@
     version     = "1.0.0" >
 
 
-  <name>MUI Test</name>
+  <name>We Funk</name>
 
   <description>
-      UI framework test for university project.
+     University project.
   </description>
 
 <platform name="android" />
