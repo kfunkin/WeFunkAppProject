@@ -11,52 +11,13 @@
     <script src="jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <!--<script type="text/javascript" src="index.js"></script>-->
-    <script type="text/javascript" src="nativeaudio.js"></script>
-    <script type="text/javascript" src="nativeaudio-browser.js"></script>
-    <script type="text/javascript" src="hotjs-audio.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-
-        bindEvents: function() {
-                document.addEventListener('deviceready', this.onDeviceReady, false);
-            },
-            // deviceready Event Handler
-            //
-            // The scope of 'this' is the event. In order to call the 'receivedEvent'
-            // function, we must explicitly call 'app.receivedEvent(...);'
-            onDeviceReady: function() {
-                app.receivedEvent('deviceready');
-                console.log('deviceready');
-            },
-            // Update DOM on a Received Event
-            receivedEvent: function(id) {
-              window.plugins.NativeAudio.preloadComplex('logo',
-                                                        'audio/LogoAudio.mp3',
-                                                        1, // volume
-                                                        1, // voices
-                                                        0, // delay
-              function(msg) {
-                  console.info(msg);
-                  window.plugins.NativeAudio.play('logo',
-                                                  function(msg){console.info(msg)},
-                                                  function(msg){ console.error( 'Error: ' + msg ); },
-                                                  function(msg){ console.error( 'Complete: ' + msg ); });
-              },
-                                                        function(msg){ alert( 'Error: ' + msg ); });
-
-          }
-        
-    </script>
+  </script>
 
   </head>
 
 <body>
 
-
-
-        <div id="sidedrawer" class="mui--no-user-select">
+  <div id="sidedrawer" class="mui--no-user-select">
           <div id="sidedrawer-brand" class="mui--appbar-line-height">
             <span class="mui--text-title">We Funk</span>
           </div>
@@ -83,7 +44,11 @@
           <script src="lottie.js"></script>
                   <div id="lottie"style="height: 360px"> </div>
 </div>
-
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+    </script>
 
 
 <div class="mui-container" style="text-align:center">
