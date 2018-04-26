@@ -23,16 +23,16 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
-        if( window.plugins && window.plugins.NativeAudio ) {
+        //if( window.plugins && window.plugins.NativeAudio ) {
 
-            var items = ['bass', 'snare', 'highhat', 'bongo'];
-            for(var i=0; i<items.length; i++) {
-                var asset = 'assets/' + items[i] + '.mp3';
-                window.plugins.NativeAudio.preloadSimple(items[i],
-                                                         asset,
-                                                         function(msg){console.info(msg)},
-                                                         function(msg){ console.error( 'Error: ' + msg ); });
-            }
+            //var items = ['bass', 'snare', 'highhat', 'bongo'];
+            //for(var i=0; i<items.length; i++) {
+                //var asset = 'assets/' + items[i] + '.mp3';
+                //window.plugins.NativeAudio.preloadSimple(items[i],
+                                                         //asset,
+                                                         //function(msg){console.info(msg)},
+                                                         //function(msg){ console.error( 'Error: ' + msg ); });
+            //}
 
             window.plugins.NativeAudio.preloadComplex('noise',
                                                       'assets/LogoAudio.mp3',
