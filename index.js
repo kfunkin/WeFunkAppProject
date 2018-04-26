@@ -45,18 +45,13 @@ var app = {
                                                 function(msg){ console.error( 'Error: ' + msg ); },
                                                 function(msg){ console.error( 'Complete: ' + msg ); });
             },
-                                                      //function(msg){ alert( 'Error: ' + msg ); });
+                                                function(msg){ alert( 'Error: ' + msg ); });
 
-        //}
+        }
 
     },
 
-    play: function(drum) {
-        document.getElementById(drum).classList.add('touched');
-        window.plugins.NativeAudio.play(drum,
-                                        function(msg){console.info(msg), document.getElementById(drum).classList.remove('touched');},
-                                        function(msg){ console.error( 'Error: ' + msg ); });
-    }
+
 
 
 };
