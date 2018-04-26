@@ -47,7 +47,7 @@ var app = {
             },
                                                       //function(msg){ alert( 'Error: ' + msg ); });
 
-        }
+        //}
 
     },
 
