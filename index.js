@@ -23,7 +23,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
-        //if( window.plugins && window.plugins.NativeAudio ) {
+        if( window.plugins && window.plugins.NativeAudio ) {
 
             //var items = ['bass', 'snare', 'highhat', 'bongo'];
             //for(var i=0; i<items.length; i++) {
