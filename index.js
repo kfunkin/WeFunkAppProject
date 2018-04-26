@@ -31,7 +31,7 @@ var app = {
                                                          asset,
                                                          function(msg){console.info(msg)},
                                                          //function(msg){ console.error( 'Error: ' + msg ); });
-            }
+            
 
             window.plugins.NativeAudio.preloadComplex('noise',
                                                       'assets/LogoAudio.mp3',
