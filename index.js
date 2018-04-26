@@ -30,7 +30,7 @@ var app = {
                 window.plugins.NativeAudio.preloadSimple(items[i],
                                                          asset,
                                                          function(msg){console.info(msg)},
-                                                         function(msg){ console.error( 'Error: ' + msg ); });
+                                                         //function(msg){ console.error( 'Error: ' + msg ); });
             }
 
             window.plugins.NativeAudio.preloadComplex('noise',
