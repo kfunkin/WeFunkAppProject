@@ -8,10 +8,10 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="mui-colors.css" rel="stylesheet" type="text/css" />
     <script src="mui.min.js"></script>
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-3.3.1.js"></script>
     <script src="script.js"></script>
+    <script src="popcorn.js"></script>
 
-  </script>
 
   </head>
 
@@ -44,17 +44,28 @@
           <script src="lottie.js"></script>
                   <div id="lottie"style="height: 360px"> </div>
 </div>
-<script type="text/javascript" src="cordova.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript">
     app.initialize();
-    </script>
+  </script>-->
 
 
 <div class="mui-container" style="text-align:center">
         <a href="play.html"><button class="mui-btn mui-btn--primary"><div class="mui--text-button" style="text-align: center">GO!</div></button></a>
 </div>
+<Audio id="intro">
+     <source src="assets/LogoAudio.mp3">
+</Audio>
+</div>
 
+<script>
+// create our instance of popcorn
+var popcorn = Popcorn( "#intro" );
+
+// set it to autoplay
+popcorn.autoplay( true );
+</script>
 
 
 </body>
