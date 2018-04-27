@@ -13,6 +13,5 @@
   </description>
 
 <platform name="android" />
-<plugin name="cordova-plugin-nativeaudio" spec="3.0.9" />
 
 </widget>
