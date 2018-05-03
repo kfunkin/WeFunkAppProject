@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="mui-colors.css" rel="stylesheet" type="text/css" />
+    <script src="mui.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <body>
+            <div id="sidedrawer" class="mui--no-user-select">
+              <div id="sidedrawer-brand" class="mui--appbar-line-height">
+                <span class="mui--text-title">We Funk</span>
+              </div>
+              <div class="mui-divider"></div>
+              <ul>
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="play.html"><strong>Play We Funk</strong></a></li>
+                <li><a href="biography.html"><strong>Biography</strong></a></li>
+                <li><a href="discography.html"><strong>Discography</strong></a></li>
+            </ul>
+            </div>
+            <header id="header">
+              <div class="mui-appbar mui--appbar-line-height" style="background-color: #212121 !important;">
+                <div class="mui-container-fluid">
+                  <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+                  <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+                  <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block" style="color: #84d2f6">Deep Fried</span>
+                </div>
+              </div>
+            </header>
+
+            <body>
+
+                <div class="mui--appbar-height"></div>
+                <img src="Images/Discography360x360-02.png" style="width:100%">
+
+            <div class="mui--text-body1; mui--text-justify" style="padding: 20px">
+              <p>The difficult second album. This was certainly the case with French Fries' follow up to their successful debut. A softer funk sound which at the time was compared to the disco-tinged schmaltz of Earth Wind and Fire, much to the dismay of their fans. Although 'Deep Fried' brought commercial success due to their new radio-friendly sound, they didn't recieve the critical acclaim they craved from their peers.
+
+              </div>
+              <script src="popcorn.js"></script>
+              <Audio id="strawb">
+                   <source src="assets/Strawberry-In-G-Min.mp3">
+              </Audio>
+              </div>
+
+              <script>
+              // create our instance of popcorn
+              var popcorn = Popcorn( "#strawb" );
+
+              // set it to autoplay
+              popcorn.autoplay( true );
+              </script>
+          </body>
+    </html>
